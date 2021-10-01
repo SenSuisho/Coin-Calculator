@@ -9,4 +9,4 @@
  * Outputs the amount into an expected format $XX.xx
  
  # Example Output
- ![] Calculator_Example.PNG
+ ![](Images/Calculator_Example.PNG)

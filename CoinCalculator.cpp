@@ -12,12 +12,12 @@ int main()
 	// Variable Declaration/Assingment
 	int Pennies = 1, Nickels = 5, Dimes = 10, Quarters = 25, Half_Dollars = 50, One_Dollars = 100;
 	int penny_amount, nickel_amount, dime_amount, quarter_amount, halfdollar_amount, onedollar_amount;
-	int valid = 1;
+	bool valid = false;
 	double total_in_cents, total_change;
 
 	cout << "Welcome to the Coin Calculator" << endl; 
 	//While loop to check for negative number entries
-	while (valid == 1)
+	while (!valid)
 	{
 		cout << "Enter the amount of pennies in an amount greater than or equal to zero: ";
 		cin >> penny_amount;
@@ -34,10 +34,9 @@ int main()
 		//If statement that either continues or breaks while loop
 		if ((penny_amount < 0) || (nickel_amount < 0) || (dime_amount < 0) || (quarter_amount < 0) || (halfdollar_amount < 0) || (onedollar_amount < 0)) {
 			cout << "Error: Please enter a positive number" << endl;
-			valid = 1;
 		}
 		else {
-			valid = 0;
+			valid = true;
 		}
 	}
 	//Conversion of change amount into dollars and cents
